@@ -1,0 +1,24 @@
+<form [formGroup]="emploeysForm" (ngSubmit)="onSubmit() " class="m-3">
+  <div class="mb-3">
+    <label for="name" class="form-label">Name</label>
+    <input formControlName="name" type="text" class="form-control" id="name">
+  </div>
+
+  <div class="mb-3">
+    <label for="email" class="form-label">Email</label>
+    <input formControlName="email" type="email" class="form-control" id="email">
+  </div>
+
+  <div class="mb-3">
+    <label for="birthday" class="form-label">Birthday</label>
+    <input formControlName="birthday" type="text" class="form-control" id="address">
+  </div>
+  <div class="mb-3">
+    <label for="phone" class="form-label">Phone</label>
+    <input formControlName="phone" type="text" class="form-control" id="phone">
+  </div>
+
+  <button [disabled]="emploeysForm.invalid" type="submit" class="btn btn-primary">
+    Add
+  </button>
+</form>
